@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta de Compra</title>
+    <!-- LINK BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- LINK BOOTSTRAP -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("/img/pivel.png");
+        }
+
+        .navbar {
+            background-color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding-top: 70px; /* Ajustar según la altura del navbar */
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 80%; /* Ancho del 80% */
+            margin: 0 auto; /* Centrar la tabla horizontalmente */
+            border-collapse: collapse;
+            background-color: white; /* Fondo blanco para toda la tabla */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center; /* Centrar contenido del footer */
+            background-color: #343a40; /* Color de fondo del footer */
+            color: white; /* Color de texto del footer */
+            padding: 10px 0; /* Espaciado interno del footer */
+            position: fixed; /* Posición fija en la parte inferior */
+            width: 100%; /* Ancho del footer al 100% del viewport */
+            bottom: 0; /* Fijar en la parte inferior */
+            left: 0; /* Fijar a la izquierda */
+        }
+
+        .volver-btn {
+            display: block;
+            margin: 20px auto 0; /* Centrar botón y agregar espacio superior */
+            width: 150px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .volver-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand boton_reversa" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="registro.html">Registrarme</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Productos</a></li>
+                            <li><a class="dropdown-item" href="#">Ventas</a></li>
+                            <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                            <li><a class="dropdown-item" href="#">Bodegas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ingresar.html">Ingresar</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Forja tu búsqueda" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Gracias por su compra</h1>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                        <th>IVA</th>
+                        <th>Sin IVA</th>
+                        <th>Descuento Suscriptor (5%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producto 1</td>
+                        <td>2</td>
+                        <td>$10</td>
+                        <td>$20</td>
+                        <td>$3.80</td>
+                        <td>$16.20</td>
+                        <td>$1</td>
+                    </tr>
+                    <tr>
+                        <td>Producto 2</td>
+                        <td>1</td>
+                        <td>$15</td>
+                        <td>$15</td>
+                        <td>$2.85</td>
+                        <td>$12.15</td>
+                        <td>$0.75</td>
+                    </tr>
+                    <tr>
+                        <td>Producto 3</td>
+                        <td>3</td>
+                        <td>$8</td>
+                        <td>$24</td>
+                        <td>$4.56</td>
+                        <td>$19.44</td>
+                        <td>$1.20</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="total">
+                        <td colspan="4">Total</td>
+                        <td>$10.21</td>
+                        <td>$48.79</td>
+                        <td>$2.95
+
+</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <a href="index.html" class="volver-btn">Volver al inicio</a>
+        
+        <div class="footer">
+            <p>¡Gracias por su preferencia!</p>
+        </div>
+    </div>
+</body>
+</html>
