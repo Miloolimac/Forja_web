@@ -55,6 +55,11 @@
         .footer .container {
             padding: 10px 20px;
         }
+        footer {
+    font-family: 'Nunito', sans-serif;
+    color: #4B3E2F;
+    text-shadow: 1px 1px 2px #D2B48C;
+}
     </style>
     
 </head>
@@ -81,10 +86,10 @@
                         Admin
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Productos</a></li>
-                        <li><a class="dropdown-item" href="#">Ventas</a></li>
-                        <li><a class="dropdown-item" href="#">Usuarios</a></li>
-                        <li><a class="dropdown-item" href="#">Bodegas</a></li>
+                        <li><a class="dropdown-item" href="adminPropductos.html">Productos</a></li>
+                        <li><a class="dropdown-item" href="adminVentas.html">Ventas</a></li>
+                        <li><a class="dropdown-item" href="adminUsuarios.html">Usuarios</a></li>
+                        <li><a class="dropdown-item" href="adminBodegas.html">Bodegas</a></li>
                     </ul>
 
 
@@ -131,8 +136,42 @@
             </div>
         </div>
     </div>
-    <footer class="footer py-3">
-        <p>© 2024 Empresa. Todos los derechos reservados.</p>
+    <footer>
+        <div class="card bg-dark text-light">
+            <div class="card-body">
+
+                <h5  class="card-title text-capuccino">Sobre nosotros</h5>
+                <h5>Contactanos</h5>
+                
+                <div class="row align-items-center justify-content-center flex-row">
+                    <div class="col-md-2 text-center mb-3">
+                        <div class="border border-secondary rounded p-2 ">
+                            <p class="card-text">WhatsApp</p>
+                            <img class="img-fluid" height="50px" width="50px" src="/img/whatsapp (1).png" alt="Favicon WhatsApp">
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <div class="border border-secondary rounded p-2 shadow">
+                            <p class="card-text">Facebook</p>
+                            <img class="img-fluid" height="50px" width="50px"  src="/img/facebook.png" alt="Favicon Facebook">
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <div class="border border-secondary rounded p-2 shadow">
+                            <p class="card-text">Instagram</p>
+                            <img class="img-fluid" height="50px" width="50px"  src="/img/instagram.png" alt="Favicon Instagram">
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <div class="border border-secondary rounded p-2 shadow">
+                            <p class="card-text">Dirección</p>
+                            <img class="img-fluid" height="50px" width="50px"  src="/img/mapa.png" alt="Favicon Dirección">
+                        </div>
+                    </div>
+                </div>
+      
+            </div>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

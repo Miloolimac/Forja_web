@@ -40,7 +40,7 @@
             bottom: 0;
             width: 100%;
             height: 60px;
-            background-color: #343a40;
+            background-color: rgba(170, 170, 170, 0.8);
             color: white;
             text-align: center;
         }
@@ -48,8 +48,33 @@
         .footer-content {
             padding-top: 15px;
         }
+        
+        #direccion {
+            line-height: 1.5;
+            height: auto; 
+            min-height: 100px;
+        }
+        .registro_foto {
+    height: 250px;
+    width: 300px;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 20px rgba(67, 39, 17, 0.8); /* Shadow más grande y color café capuccino */
+    margin: auto;
+    display: block;
+        }
+        
+     footer {
+    font-family: 'Nunito', sans-serif;
+    color: #4B3E2F;
+    text-shadow: 1px 1px 2px #D2B48C;
+}
+.card-text {
+    font-size: 20px;
+      }
+
     </style>
 </head>
+<div id="menu"></div>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -75,10 +100,10 @@
                             Admin
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">productos</a></li>
-                            <li><a class="dropdown-item" href="#">ventas</a></li>
-                            <li><a class="dropdown-item" href="#">Usuarios</a></li>
-                            <li><a class="dropdown-item" href="#">bodegas</a></li>
+                            <li><a class="dropdown-item" href="adminPropductos.html">Productos</a></li>
+                            <li><a class="dropdown-item" href="adminVentas.html">Ventas</a></li>
+                            <li><a class="dropdown-item" href="adminUsuarios.html">Usuarios</a></li>
+                            <li><a class="dropdown-item" href="adminBodegas.html">Bodegas</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -94,12 +119,11 @@
     </nav>
     <div class="container mt-5">
         <div class="row justify-content-center">
-
-            <!-- Registro -->
+            <!----Formulario de  Registro de cliente -->
             <div class="col-md-6">
                 <div class="custom-container">
-                    <h2 class="mb-4">Registro de cliente</h2>
-                    <form>
+                    <h1>Registro de cliente</h1>
+                    <form  class="row g-3 needs-validation" novalidate>
                         <div class="form-group">
                             <label for="nombre">Nombre:</label>
                             <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
@@ -116,44 +140,106 @@
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
                         </div>
-                        <div class="form-group">
-                            <label for="telefono">direccion:</label>
-                            <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono" required>
-                        </div>
-
-
-                        <h2 class="mb-4">Elije una contraseña</h2>
-                        <div class="form-group">
-                            <label for="contrasena">Contraseña:</label>
-                            <input type="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="repetirContrasena">Repetir Contraseña:</label>
-                            <input type="password" class="form-control" id="repetirContrasena" placeholder="Repite tu contraseña" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="suscripcion">¿Deseas suscribirte?</label>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="suscripcion">
-                                <label class="custom-control-label" for="suscripcion">Sí, deseo suscribirme</label>
+                        <div class="form-group"
+                            <label for="direccion" class="form-label">Dirección</label>
+                            <textarea required placeholder="Ej: Calle 1, Alonso de Ovalle" 
+                                class="form-control" rows="3"
+                                id="direccion" name="direccion" aria-describedby="direccionHelp"></textarea>
+                            <div id="direccionHelp" class="form-text">
+                                Escribe tu direccion
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Dirección es obligatorio
                             </div>
                         </div>
-
-
+                        <br>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Registrarse</button>
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" required placeholder="Escribe aquí tu contraseña" 
+                                class="form-control"
+                                id="password" name="password" aria-describedby="passwordHelp">
+                            <div id="passwordHelp" class="form-text">
+                                La contraseña debe tener un número, un símbolo, 
+                                letras mayúsculas y minúsculas, y además debe
+                                tener al menos 8 caracteres.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo password es obligatorio
+                            </div>
                         </div>
-                    </form>
+                        <!-- Campo Repetir Contraseña -->
+                        <div class="form-group">
+                            <label for="password2" class="form-label">Repetir contraseña</label>
+                            <input type="password" required placeholder="Repite aquí tu contraseña" 
+                                class="form-control"
+                                id="password2" name="password2" aria-describedby="password2Help">
+                            <div id="password2Help" class="form-text">
+                                La contraseña debe ser igual a la de arriba.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Repetir Contraseña es obligatorio
+                            </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                    <button type="reset" class="btn btn-primary">Limpiar</button>
+                                </div>
+                                <br> <br> <br>
+                            </div> <!---ciere div formulario-->
+                            <div class="row justify-content-center">
+                                <div class="col-sm-12 col-md-4 text-center">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="registro_foto" src="/img/monckey.jpg" alt="">
+                                    </div>
+                                    <br><br>
+                                    <label for="fotoPerfil" class="btn btn-primary">Examinar</label>
+                                    <input type="file" id="fotoPerfil" style="display: none;">
+                                </div>
+                            </div>
+                    </div>
                 </div>
-            </div>
         </div>
+    </form>
     </div>
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>© 2024 Empresa. Todos los derechos reservados.</p>
+    <footer>
+        <div class="card bg-dark text-light">
+            <div class="card-body">
+
+                <h5  class="card-title text-capuccino">Sobre nosotros</h5>
+                <h5>Contactanos</h5>
+                
+                <div class="row align-items-center justify-content-center flex-row">
+                    <div class="col-md-2 text-center mb-3">
+                        <div class="border border-secondary rounded p-2 ">
+                            <p class="card-text">WhatsApp</p>
+                            <img class="img-fluid" height="50px" width="50px" src="/img/whatsapp (1).png" alt="Favicon WhatsApp">
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <div class="border border-secondary rounded p-2 shadow">
+                            <p class="card-text">Facebook</p>
+                            <img class="img-fluid" height="50px" width="50px"  src="/img/facebook.png" alt="Favicon Facebook">
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <div class="border border-secondary rounded p-2 shadow">
+                            <p class="card-text">Instagram</p>
+                            <img class="img-fluid" height="50px" width="50px"  src="/img/instagram.png" alt="Favicon Instagram">
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <div class="border border-secondary rounded p-2 shadow">
+                            <p class="card-text">Dirección</p>
+                            <img class="img-fluid" height="50px" width="50px"  src="/img/mapa.png" alt="Favicon Dirección">
+                        </div>
+                    </div>
+                </div>
+      
+            </div>
         </div>
     </footer>
+           
     <script>
         function volverAlInicio() {
             window.scrollTo(0, 0);       
