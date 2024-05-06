@@ -10,15 +10,18 @@
     <!-- LINK BOOTSTRAP -->
     <link rel="stylesheet" href="ingresar.html">
     <style>
-       
+        body{
+            background-image: url(/img/fondo_vap.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
         .container {
             max-width: 800px;
             margin: auto;
             padding-top: 10px; 
             text-align: justify;
         }
-
-       
     </style>
 </head>
 
@@ -75,81 +78,96 @@
         </div>
     </nav>
     </header>
+    <style>
+     h2{
+        text-align: center;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+    color: #ffe100; 
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 70px #d2ff09, 0 0 80px #ff00ff, 0 0 100px #ff00ff, 0 0 150px #ff00ff;
+}
+     
+    </style>
     <!----------->
     <main role="main">
-    <div class="container">
-    <section class="text-center">
-        <h2> tabla de productos</h2>
-    <div class="row">
-        <div class="col">
-        <!-----end productos-->
-        <table class="table table-hover">
-            <!----contenido de la tabla-->
+        <div class="container">
+          <section class="text-center">
+            <h2 style="margin-top: 200px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font">Tabla de productos</h2>
+            <div class="row">
+              <div class="col">
+                <!--end productos-->
             
-              <thead>
-                  <th scope="col">Nro boleta</th>
-                  <th scope="col">Fecha venta</th>
-                  <th scope="col">Fecha despacho</th>
-                  <th scope="col" class="text-end">fecha entrega</th>
-                  <th scope="col" class="text-end">Monto total</th>
-                  <th scope="col" class="text-end">Estado actual</th>
-                  <th scope="col" class="text-end">Opciones</th>
-                  
-              </thead>
-              <tbody> <!--Tr(filas)/ Td(Columnas)-->
-                  <tr>
-                  <td scope="row" class="text-justify">111</td>
-                  <td scope="col">1/1/2024</td>
-                  <td scope="col">1/1/2024</td>
-                  <td scope="col" class="text-end">1/1/2024</td>
-                  <td scope="col" class="text-end">$15000</td>
-                  <td scope="col" class="text-end">Entregado</td>
-                  <td scope="col" class="text-end"><a href="">Ver estado</a></td>                 
-                  </tr>
+                <style>
 
-                  <tr>
-                    <td scope="row">111</td>
-                    <td scope="col">1/1/2024</td>
-                    <td scope="col">1/1/2024</td>
-                    <td scope="col" class="text-end">1/1/2024</td>
-                    <td scope="col" class="text-end">$5000</td>
-                    <td scope="col" class="text-end">Entregado</td>
-                    <td scope="col" class="text-end"><a href="">Ver estado</a></td>                 
+                    
+                </style>
+                <table class="table table-hover table-rounded" style="margin-bottom: 350px;">
+                  <!--contenido de la tabla-->
+                  <thead>
+                    <tr>
+                      <th scope="col" style="border-top-left-radius: 20px;">Nro boleta</th>
+                      <th scope="col">Fecha venta</th>
+                      <th scope="col">Fecha despacho</th>
+                      <th scope="col" class="text-end">Fecha entrega</th>
+                      <th scope="col" class="text-end">Monto total</th>
+                      <th scope="col" class="text-end">Estado actual</th>
+                      <th scope="col" class="text-end" style="border-top-right-radius: 20px;">Opciones</th>
                     </tr>
-                <tr>
-                  <td scope="row">222</td>
-                  <td scope="col">2/2/2024</td>
-                  <td scope="col">2/2/2024</td>
-                  <td scope="col" class="text-end">3/1/2024</td>
-                  <td scope="col" class="text-end">$40000</td>
-                  <td scope="col" class="text-end">Despachado</td>
-                  <td scope="col" class="text-end"><a href="">Ver estado</a></td>                 
-                  </tr>
-    
-                <tr>
-                  <td scope="row">333</td>
-                  <td scope="col">4/1/2024</td>
-                  <td scope="col">4/1/2024</td>
-                  <td scope="col" class="text-end">5/1/2024</td>
-                  <td scope="col" class="text-end">$20000</td>
-                  <td scope="col" class="text-end">Despachado</td>
-                  <td scope="col" class="text-end"><a href="">Ver estado</a></td>                 
-                  </tr>
-            <tr>
-                  <td scope="row">444</td>
-                  <td scope="col">6/1/2024</td>
-                  <td scope="col">6/1/2024</td>
-                  <td scope="col" class="text-end">6/1/2024</td>
-                  <td scope="col" class="text-end">$19000</td>
-                  <td scope="col" class="text-end">Vendido</td>
-                  <td scope="col" class="text-end"><a href="">Ver estado</a></td>                 
-                  </tr>
-                </tbody>
-            </tfoot>   
-                                     
-        </tbody>
-  </table>   
-
+                  </thead>
+                  <tbody> <!--Tr(filas)/ Td(Columnas)-->
+                    <tr>
+                      <td scope="row" class="text-justify">111</td>
+                      <td scope="col">1/1/2024</td>
+                      <td scope="col">1/1/2024</td>
+                      <td scope="col" class="text-end">1/1/2024</td>
+                      <td scope="col" class="text-end">$15000</td>
+                      <td scope="col" class="text-end">Entregado</td>
+                      <td scope="col" class="text-end"><a href="">Ver estado</a></td>
+                    </tr>
+                    <tr>
+                      <td scope="row">111</td>
+                      <td scope="col">1/1/2024</td>
+                      <td scope="col">1/1/2024</td>
+                      <td scope="col" class="text-end">1/1/2024</td>
+                      <td scope="col" class="text-end">$5000</td>
+                      <td scope="col" class="text-end">Entregado</td>
+                      <td scope="col" class="text-end"><a href="">Ver estado</a></td>
+                    </tr>
+                    <tr>
+                      <td scope="row">222</td>
+                      <td scope="col">2/2/2024</td>
+                      <td scope="col">2/2/2024</td>
+                      <td scope="col" class="text-end">3/1/2024</td>
+                      <td scope="col" class="text-end">$40000</td>
+                      <td scope="col" class="text-end">Despachado</td>
+                      <td scope="col" class="text-end"><a href="">Ver estado</a></td>
+                    </tr>
+                    <tr>
+                      <td scope="row">333</td>
+                      <td scope="col">4/1/2024</td>
+                      <td scope="col">4/1/2024</td>
+                      <td scope="col" class="text-end">5/1/2024</td>
+                      <td scope="col" class="text-end">$20000</td>
+                      <td scope="col" class="text-end">Despachado</td>
+                      <td scope="col" class="text-end"><a href="">Ver estado</a></td>
+                    </tr>
+                    <tr>
+                      <td scope="row" style="border-bottom-left-radius: 20px;">444</td>
+                      <td scope="col">6/1/2024</td>
+                      <td scope="col">6/1/2024</td>
+                      <td scope="col" class="text-end">6/1/2024</td>
+                      <td scope="col" class="text-end">$19000</td>
+                      <td scope="col" class="text-end" >Vendido</td>
+                      <td scope="col" class="text-end" style="border-bottom-right-radius: 20px;"><a href="">Ver estado</a></td>
+                    </tr>
+                  </tbody>
+                </table> 
+              </div>
+            </div>
+          </section>
+        </div>  
+      </main>
+  
 
                   <!--Footer-->
 <footer class="bg-white py-4">
